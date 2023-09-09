@@ -1,12 +1,17 @@
 package com.mycom.word;
 
+import java.awt.image.DataBufferDouble;
+import java.io.BufferedReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class WordCRUD implements ICRUD{
     ArrayList<Word> list;
     Scanner s;
-
+    final String fname = "Dictionary.txt";
     WordCRUD(Scanner s){
         list = new ArrayList<>();
         this.s = s;
@@ -55,7 +60,7 @@ public class WordCRUD implements ICRUD{
         }
         System.out.println("-----------------------------");
     }
-
+/*
     public ArrayList<Integer> listAll(String keyword) {
 
         ArrayList<Integer> idlist = new ArrayList<>();
@@ -64,6 +69,20 @@ public class WordCRUD implements ICRUD{
         for(int i = 0; i< list.size(); i++) {
             String word = list.get(i).getWord();
             if(!word.contains(keyword)) continue;
+            System.out.print((j+1) + " ");
+            System.out.println(list.get(i).toString());
+            idlist.add(i);
+            j++;
+        }
+        System.out.println("-----------------------------");
+        return idlist;
+    }
+    public void listAll(int level){
+        int j = 0;
+        System.out.println("-----------------------------");
+        for(int i = 0; i< list.size(); i++) {
+            int ilevel = list.get(i).getLevel();
+            if(ilevel != level)) continue;
             System.out.print((j+1) + " ");
             System.out.println(list.get(i).toString());
             idlist.add(i);
@@ -103,4 +122,47 @@ public class WordCRUD implements ICRUD{
         } else
             System.out.println("취소되었습니다. ");
     }
+
+    public void loadFile(){
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(fname));
+            String line;
+
+            while(true) {
+                line = br.readLine();
+                if(line == null) break;
+
+                String date[] = line.split("\\|");
+                int level = Integer.parseInt(data[0]);
+                String word = data[1];
+                String meaning = data[2];
+                list.add(new Word(0, level, word, meaning));
+            }
+            br.close();
+            system.out.println("");
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public void saveFile() {
+        try {
+            PrintWriter pr = new PrintWriter(new FileWriter("test.txt"));
+            for(Word one : list){
+                pr.write(one.toFileString() + "\n");
+            }
+            pr.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void searchLevel(){
+        System.out.print("=> 원하는 레벨은? (1~3) ");
+        int level = s.nextInt();
+        listAll(level);
+    }
+
+ */
 }
