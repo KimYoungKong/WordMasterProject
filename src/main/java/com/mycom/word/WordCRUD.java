@@ -1,10 +1,7 @@
 package com.mycom.word;
 
 import java.awt.image.DataBufferDouble;
-import java.io.BufferedReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -108,7 +105,7 @@ public class WordCRUD implements ICRUD{
         } else
             System.out.println("취소되었습니다. ");
     }
-/*
+
     public void loadFile(){
         try{
             BufferedReader br = new BufferedReader(new FileReader(fname));
@@ -118,20 +115,21 @@ public class WordCRUD implements ICRUD{
                 line = br.readLine();
                 if(line == null) break;
 
-                String date[] = line.split("\\|");
+                String data[] = line.split("\\|");
+
                 int level = Integer.parseInt(data[0]);
                 String word = data[1];
                 String meaning = data[2];
                 list.add(new Word(0, level, word, meaning));
             }
             br.close();
-            system.out.println("");
+            System.out.println("");
         } catch (IOException e){
             e.printStackTrace();
         }
 
     }
-
+/*
     public void saveFile() {
         try {
             PrintWriter pr = new PrintWriter(new FileWriter("test.txt"));
@@ -149,6 +147,5 @@ public class WordCRUD implements ICRUD{
         int level = s.nextInt();
         listAll(level);
     }
-
- */
+    */
 }
