@@ -43,7 +43,6 @@ public class WordManager {
     }
     public void start(){
         while(true) {
-          //  wordCRUD.loadFile();
             int menu = selectMenu();
             if(menu == 0) break;
             if(menu == 4) {
