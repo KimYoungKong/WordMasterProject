@@ -60,7 +60,7 @@ public class WordCRUD implements ICRUD{
         }
         System.out.println("-----------------------------");
     }
-/*
+
     public ArrayList<Integer> listAll(String keyword) {
 
         ArrayList<Integer> idlist = new ArrayList<>();
@@ -82,15 +82,15 @@ public class WordCRUD implements ICRUD{
         System.out.println("-----------------------------");
         for(int i = 0; i< list.size(); i++) {
             int ilevel = list.get(i).getLevel();
-            if(ilevel != level)) continue;
+            if(ilevel != level) continue;
+
             System.out.print((j+1) + " ");
             System.out.println(list.get(i).toString());
-            idlist.add(i);
-            j++;
         }
         System.out.println("-----------------------------");
-        return idlist;
+
     }
+
     public void updateItem() {
         System.out.println("=> 수정할 단어 검색 : ");
         String keyword = s.next();
@@ -122,7 +122,7 @@ public class WordCRUD implements ICRUD{
         } else
             System.out.println("취소되었습니다. ");
     }
-
+/*
     public void loadFile(){
         try{
             BufferedReader br = new BufferedReader(new FileReader(fname));
