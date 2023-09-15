@@ -129,7 +129,7 @@ public class WordCRUD implements ICRUD{
         }
 
     }
-/*
+
     public void saveFile() {
         try {
             PrintWriter pr = new PrintWriter(new FileWriter("test.txt"));
@@ -141,7 +141,7 @@ public class WordCRUD implements ICRUD{
             e.printStackTrace();
         }
     }
-
+/*
     public void searchLevel(){
         System.out.print("=> 원하는 레벨은? (1~3) ");
         int level = s.nextInt();
