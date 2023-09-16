@@ -1,0 +1,19 @@
+3|superintendent|관리자,감독관
+1|apple|사과
+1|electric|전기의,전기를 생산하는
+2|equipment|장비, 용품
+1|pole|기둥, 장대
+1|formerly|이전에, 예전에
+1|lung|폐의
+1|aware|알고 있는
+3|saturated|속속들이 스며든, 흠뻑 젖은
+2|saturate|포화 상태의
+1|fiber|섬유질의
+1|colon|식민지의
+3|fureniture|가구
+2|conjunction|접속사
+1|labor|노동
+1|tan|햇볕에 타다
+3|complextion|안색
+1|flock|떼, 무리
+1|word|단어
